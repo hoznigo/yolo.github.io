@@ -1,0 +1,63 @@
+데이터 담당 : 강호준, 이소창
+
+네트워크 및 실행 담당 : 김혜주, 이유경, 한아람, 함윤성
+
+- 참고한 튜토리얼
+
+    [https://www.youtube.com/watch?v=c18ILApJ1OU&feature=youtu.be](https://www.youtube.com/watch?v=c18ILApJ1OU&feature=youtu.be)
+
+- 참고한 소스코드
+
+    출처 : [https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=159#sec2](https://tacademy.skplanet.com/live/player/onlineLectureDetail.action?seq=159)
+
+    darknet 형식으로 만들어진 weight  파일을 keras에서 사용할 수 있는 h5 형식으로 바꿔서 적용할 수 있는 코드
+
+    [원본소스코드(ipynb).zip](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52b4ba7d-ea7f-4d3c-950c-3c248fc2a527/(ipynb).zip)
+
+    테스트한 코드
+
+    [Object_Detection_hj.ipynb](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70acbfbe-ab7d-4a7b-9b6f-93f606fddd23/Object_Detection_hj.ipynb)
+
+- 코드에 필요한 파일 구조와 데이터
+
+    Capstone
+      *darknet
+      *keras-yolo3
+          *UECFOOD2
+          *logs                                                                                                                            
+          *train_all.txt
+          *yolov3.h5
+
+- 커스텀 데이터
+
+    UECFOOD100 데이터 중 2개 클래스(rice, toast만 골라서 UECFOOD2 라는 작은 데이터를 만듦
+
+    UECFOOD100 데이터 → [http://foodcam.mobi/dataset100.html](http://foodcam.mobi/dataset100.html)
+
+    [custom_data.zip](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e6c45c0-d75f-47ba-900b-3c913478e261/custom_data.zip)
+
+    keras-yolo 학습을 위해 필요한 데이터 형식으로 만드는 코드(회의록 페이지의 20201008.pptx 참고)
+
+    [UECbbinfo_to_kerasyolo.ipynb](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/832229c5-85c3-4ea4-bd50-272b34073130/UECbbinfo_to_kerasyolo.ipynb)
+
+- 학습 과정 및 결과
+
+    아직 이해하는 중
+
+    yolo모델의 구조는 다음과 같음 
+
+    [yolo3_structure.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ba64597b-66c9-44b7-99be-c1fb2d858965/yolo3_structure.png)
+
+    50 epoch를 학습시킴 아래 html파일에 결과있음
+
+    [Object_Detection_hj.html](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9161213c-8b3c-4a1c-9e3b-8049b89c38b7/Object_Detection_hj.html)
+
+- 결론
+
+    우리가 모은 데이터로 테스트해 본 결과 성능이 좋지는 않았다.
+
+    학습데이터가 200개 이미지 정도로 작아서일까...?
+
+- 기타 참고자료
+
+    [https://eungbean.github.io/2018/11/07/yolo-for-realtime-food-recognition/](https://eungbean.github.io/2018/11/07/yolo-for-realtime-food-recognition/)
